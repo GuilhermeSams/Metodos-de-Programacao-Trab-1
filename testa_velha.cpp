@@ -20,3 +20,12 @@ TEST_CASE("Verifica vitória do jogador O na linha horizontal") {
     };
     REQUIRE(verificarVencedorO(jogo) == 2);
 }
+
+TEST_CASE("Verifica empate") {
+    int jogo[3][3] = {
+        {1, 2, 1},
+        {1, 2, 2},
+        {2, 1, 1}
+    };
+    REQUIRE(verificarEmpate(jogo) == 0);
+}

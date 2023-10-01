@@ -15,3 +15,11 @@ int verificarVencedorX(int jogo[3][3]) {
             return 1;
     }
 }
+
+int verificarVencedorO(int jogo[3][3]) {
+    // Verificar vitória na linha horizontal para o jogador O
+    for (int i = 0; i < 3; ++i) {
+        if (jogo[i][0] == 2 && jogo[i][1] == 2 && jogo[i][2] == 2)
+            return 2;
+    }
+}
