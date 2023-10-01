@@ -1,3 +1,9 @@
+CXX = g++
+CXXFLAGS = -std=c++11 -Wall
+LDFLAGS =
+SOURCES = velha.cpp testa_velha.cpp
+EXECUTABLE = testa_velha
+
 all: testa_velha.cpp   velha.cpp velha.hpp velha.o
 	g++ -std=c++11 -Wall velha.o testa_velha.cpp -o testa_velha
 	./testa_velha
