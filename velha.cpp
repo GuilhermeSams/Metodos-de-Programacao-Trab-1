@@ -43,6 +43,16 @@ int verificarVencedorO(int jogo[3][3]) {
     }
 }
 
+int verificarVencedorODiagonal(int jogo[3][3]) {
+    // Verificar vitória na diagonal para o jogador O
+    if (jogo[0][0] == 2 && jogo[1][1] == 2 && jogo[2][2] == 2)
+        return 2;
+    if (jogo[0][2] == 2 && jogo[1][1] == 2 && jogo[2][0] == 2)
+        return 2;
+
+    return 0;
+}
+
 int verificarEmpate(int jogo[3][3]) {
     for (int i = 0; i < 3; ++i) {
         for (int j = 0; j < 3; ++j) {
