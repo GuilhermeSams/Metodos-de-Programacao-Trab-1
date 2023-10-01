@@ -49,3 +49,14 @@ int verificarJogoIndefinido(int jogo[3][3]) {
 
     return 0;  // O jogo não está indefinido
 }
+
+int verificarJogoImpossivel(int jogo[3][3]) {
+    for (int i = 0; i < 3; ++i) {
+        for (int j = 0; j < 3; ++j) {
+            if (jogo[i][j] != 1)
+                return 0;  // O jogo não é impossível, pois há pelo menos uma posição que não é X
+        }
+    }
+
+    return -2;  // O jogo é impossível, pois todas as posições são X
+}
