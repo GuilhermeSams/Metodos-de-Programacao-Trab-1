@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall
+CXXFLAGS = -std=c++11 -Wall -ftest-coverage -fprofile-arcs
 LDFLAGS =
 SOURCES = velha.cpp testa_velha.cpp
 EXECUTABLE = testa_velha
@@ -7,7 +7,7 @@ EXECUTABLE = testa_velha
 all: testa_velha.cpp   velha.cpp velha.hpp velha.o
 	g++ -std=c++11 -Wall velha.o testa_velha.cpp -o testa_velha
 	./testa_velha
-	#use comentario se necessario
+	#Algumas coisas a Considerar: Quando rodei make gcov ele criou diversos arquivos gcov e não 1 gcov com antotação e achei isso inesperado, então eu não inclui eles no trabalho, caso queira, rode um make gcov no terminal da pasta do projeto. O site disponibilizado pra ver as regras do jogo da velha está indisponível.
 
 compile: testa_velha.cpp   velha.cpp velha.hpp velha.o
 	g++ -std=c++11 -Wall velha.o testa_velha.cpp -o testa_velha
@@ -44,6 +44,4 @@ valgrind: testa_velha
 
 
 clean:
-	rm -rf *.o *.exe *.gc* testa_velha
-	
-	
+	rm -rf *.o *.exe *.gc* testa_velha valgrind.rpt

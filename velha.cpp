@@ -4,12 +4,9 @@
  * @brief verifica situacao do jogo da velha  
  * @author Guilherme Pereira Sampaio
  * @param  velha descreve o parametro
- * 
- *  Descrever o que a funcao faz
  */ 
 
 int verificarVencedorX(int jogo[3][3]) {
-    // Verificar vitória na linha horizontal para o jogador X
     for (int i = 0; i < 3; ++i) {
         if (jogo[i][0] == 1 && jogo[i][1] == 1 && jogo[i][2] == 1)
             return 1;
@@ -17,7 +14,6 @@ int verificarVencedorX(int jogo[3][3]) {
 }
 
 int verificarVencedorXDiagonal(int jogo[3][3]) {
-    // Verificar vitória na diagonal para o jogador X
     if (jogo[0][0] == 1 && jogo[1][1] == 1 && jogo[2][2] == 1)
         return 1;
     if (jogo[0][2] == 1 && jogo[1][1] == 1 && jogo[2][0] == 1)
@@ -27,7 +23,6 @@ int verificarVencedorXDiagonal(int jogo[3][3]) {
 }
 
 int verificarVencedorXVertical(int jogo[3][3]) {
-    // Verificar vitória na vertical para o jogador X
     for (int i = 0; i < 3; ++i) {
         if (jogo[0][i] == 1 && jogo[1][i] == 1 && jogo[2][i] == 1)
             return 1;
@@ -36,7 +31,6 @@ int verificarVencedorXVertical(int jogo[3][3]) {
 }
 
 int verificarVencedorO(int jogo[3][3]) {
-    // Verificar vitória na linha horizontal para o jogador O
     for (int i = 0; i < 3; ++i) {
         if (jogo[i][0] == 2 && jogo[i][1] == 2 && jogo[i][2] == 2)
             return 2;
@@ -44,7 +38,6 @@ int verificarVencedorO(int jogo[3][3]) {
 }
 
 int verificarVencedorODiagonal(int jogo[3][3]) {
-    // Verificar vitória na diagonal para o jogador O
     if (jogo[0][0] == 2 && jogo[1][1] == 2 && jogo[2][2] == 2)
         return 2;
     if (jogo[0][2] == 2 && jogo[1][1] == 2 && jogo[2][0] == 2)
@@ -54,7 +47,6 @@ int verificarVencedorODiagonal(int jogo[3][3]) {
 }
 
 int verificarVencedorOVertical(int jogo[3][3]) {
-    // Verificar vitória na vertical para o jogador O
     for (int i = 0; i < 3; ++i) {
         if (jogo[0][i] == 2 && jogo[1][i] == 2 && jogo[2][i] == 2)
             return 2;
