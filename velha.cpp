@@ -53,6 +53,8 @@ int verificarVencedorODiagonal(int jogo[3][3]) {
     return 0;
 }
 
+
+
 int verificarEmpate(int jogo[3][3]) {
     for (int i = 0; i < 3; ++i) {
         for (int j = 0; j < 3; ++j) {
