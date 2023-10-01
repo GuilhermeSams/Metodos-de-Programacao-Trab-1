@@ -29,3 +29,12 @@ TEST_CASE("Verifica empate") {
     };
     REQUIRE(verificarEmpate(jogo) == 0);
 }
+
+TEST_CASE("Verifica jogo indefinido") {
+    int jogo[3][3] = {
+        {1, 0, 0},
+        {0, 0, 0},
+        {0, 0, 0}
+    };
+    REQUIRE(verificarJogoIndefinido(jogo) == -1);
+}

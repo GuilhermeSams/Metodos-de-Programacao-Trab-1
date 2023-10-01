@@ -33,3 +33,19 @@ int verificarEmpate(int jogo[3][3]) {
     }
     return 0;  // Se não há posição vazia, o jogo está empatado
 }
+
+int verificarJogoIndefinido(int jogo[3][3]) {
+    int contadorX = 0;
+
+    for (int i = 0; i < 3; ++i) {
+        for (int j = 0; j < 3; ++j) {
+            if (jogo[i][j] == 1)
+                contadorX++;
+        }
+    }
+
+    if (contadorX == 1)
+        return -1;  // O jogo está indefinido
+
+    return 0;  // O jogo não está indefinido
+}
