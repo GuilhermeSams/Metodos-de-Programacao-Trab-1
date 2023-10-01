@@ -12,7 +12,14 @@ TEST_CASE("Verifica vitória do jogador X na linha horizontal") {
     REQUIRE(verificarVencedorX(jogo) == 1);
 }
 
-
+TEST_CASE("Verificar vitória do jogador X na diagonal") {
+    int jogo[3][3] = {
+        {1, 0, 0},
+        {0, 1, 0},
+        {0, 0, 1}
+    };
+    REQUIRE(verificarVencedorXDiagonal(jogo) == 1);
+}
 
 TEST_CASE("Verifica vitória do jogador O na linha horizontal") {
     int jogo[3][3] = {
